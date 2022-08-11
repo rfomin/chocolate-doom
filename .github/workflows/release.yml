@@ -45,6 +45,7 @@ jobs:
         with:
           update: true
           msystem: ${{ matrix.sys }}
+          path-type: inherit
           install: >-
             autotools
             zip
