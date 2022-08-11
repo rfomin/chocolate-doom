@@ -36,6 +36,10 @@ jobs:
           - { sys: mingw32, env: i686 }
 
     steps:
+      - name: Install pandoc
+        shell: cmd
+        run: choco install pandoc
+
       - name: Setup MSYS2
         uses: msys2/setup-msys2@v2
         with:
@@ -50,9 +54,6 @@ jobs:
             mingw-w64-${{matrix.env}}-SDL2_net
             mingw-w64-${{matrix.env}}-libpng
             mingw-w64-${{matrix.env}}-libsamplerate
-
-      - name: Install pandoc
-        run: choco install pandoc
 
       - uses: actions/checkout@v2
 
