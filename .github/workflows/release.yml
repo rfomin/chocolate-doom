@@ -49,6 +49,10 @@ jobs:
             mingw-w64-${{matrix.env}}-SDL2_net
             mingw-w64-${{matrix.env}}-libpng
             mingw-w64-${{matrix.env}}-libsamplerate
+            mingw-w64-${{matrix.env}}-zip
+
+      - name: Install pandoc
+        run: choco install pandoc
 
       - uses: actions/checkout@v2
 
