@@ -43,13 +43,13 @@ jobs:
           msystem: ${{ matrix.sys }}
           install: >-
             autotools
+            zip
             mingw-w64-${{matrix.env}}-gcc
             mingw-w64-${{matrix.env}}-SDL2
             mingw-w64-${{matrix.env}}-SDL2_mixer
             mingw-w64-${{matrix.env}}-SDL2_net
             mingw-w64-${{matrix.env}}-libpng
             mingw-w64-${{matrix.env}}-libsamplerate
-            mingw-w64-${{matrix.env}}-zip
 
       - name: Install pandoc
         run: choco install pandoc
